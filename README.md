@@ -185,15 +185,22 @@ src/
 
 Here's a walkthrough of implemented required features:
 
-👉🏿 [Insert GIF of app demo showing:
-- Homepage with creator grid
-- Clicking card to view details
-- Adding a new creator
-- Editing creator info
-- Deleting a creator
-- Responsive design on mobile]
+- Homepage with creator grid & clicking card to view details
+<img width="400" height="225" alt="view-creator" src="https://github.com/user-attachments/assets/0697712e-7a8c-43d2-b0d7-4672f77f5c8f" />
 
-GIF created with **ScreenToGif** (Windows) or **Kap** (macOS)
+- Adding a new creator
+<img width="400" height="225" alt="create-creator" src="https://github.com/user-attachments/assets/3e6eb708-fd45-46c2-8db3-27732c355278" />
+
+- Editing creator info
+<img width="400" height="225" alt="edit-creator" src="https://github.com/user-attachments/assets/c37b1af4-f6cc-4b2c-bf62-0f184e51bf37" />
+
+- Deleting a creator
+<img width="400" height="225" alt="delete-creator" src="https://github.com/user-attachments/assets/60ea5bb4-6689-4e7c-8b46-27c09e0d39c2" />
+
+- Responsive design on mobile
+<img width="400" height="225" alt="mobile-view" src="https://github.com/user-attachments/assets/293c152b-9c75-4cf7-9b4b-85d0872e5bd3" />
+
+Note: GIF created with **ScreenToGif** (Windows) or **Kap** (macOS)
 
 ## Challenges & Solutions
 
