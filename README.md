@@ -1,6 +1,6 @@
 # WEB103 Prework - Creatorverse
 
-Submitted by: **Alice Panh**
+Submitted by: **Anh Pham**
 
 About this web app: **Creatorverse is a full-stack content creator management application that allows users to view, add, edit, and delete content creators. Built with React, React Router, and Supabase, it features a responsive card-based design with a beautiful color system and smooth animations.**
 
@@ -18,7 +18,7 @@ The following **required** functionality is completed:
 - [x] **At least five content creators are displayed on the homepage of the app**
   - Creators fetched from Supabase database
   - Displayed in a responsive grid layout
-  - Shows "NO CREATORS YET 😢" when database is empty
+  - Shows "Let's create the first creator!" when database is empty
   
 - [x] **Each content creator item includes their name, a link to their channel/page, and a short description of their content**
   - Card displays: name, description (limited to 2 lines), "Visit Channel" link
@@ -230,15 +230,10 @@ GIF created with **ScreenToGif** (Windows) or **Kap** (macOS)
 ## Future Enhancements
 
 - Search/filter creators by name or description
-- Sort creators (by name, date added, etc.)
 - Favorites/bookmarks system
 - Creator categories or tags
-- Statistics dashboard (total creators, with images, etc.)
 - Image upload to Supabase storage
-- Dark mode toggle
 - User authentication for personal creator lists
-- Export creator data as CSV
-- Advanced filtering options
 
 ## Notes
 
@@ -252,7 +247,7 @@ All required features are fully implemented and tested. The app is fully functio
 
 ## License
 
-Copyright 2024 Alice Panh
+Copyright 2024 Anh Pham
 
 Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
 
