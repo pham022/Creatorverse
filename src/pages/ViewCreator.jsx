@@ -1,19 +1,32 @@
 import React, { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
 import { supabase } from '../client'
 import './ViewCreator.css'
 
-const ViewCreator = ({ creatorId, onBack }) => {
+const ViewCreator = ({ onBack }) => {
+  const { id } = useParams()
   const [creator, setCreator] = useState(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
 
   useEffect(() => {
-    fetchCreator()
-  }, [creatorId])
+    if (id) {
+      fetchCreator()
+    }
+  }, [id])
 
   const fetchCreator = async () => {
     try {
       setLoading(true)
+      setError(null)
+      
+      // Ensure id is a number
+      const creatorId = parseInt(id)
+      
+      if (isNaN(creatorId)) {
+        throw new Error('Invalid creator ID')
+      }
+
       const { data, error } = await supabase
         .from('creators')
         .select('*')
@@ -22,9 +35,9 @@ const ViewCreator = ({ creatorId, onBack }) => {
 
       if (error) throw error
       setCreator(data)
-      setError(null)
     } catch (err) {
-      setError(err.message)
+      const errorMessage = err instanceof Error ? err.message : 'Unknown error'
+      setError(errorMessage)
       console.error('Error fetching creator:', err)
     } finally {
       setLoading(false)
@@ -57,9 +70,11 @@ const ViewCreator = ({ creatorId, onBack }) => {
           )}
 
           <div className="creator-meta">
-            <p>
-              <strong>Created:</strong> {new Date(creator.created_at).toLocaleDateString()}
-            </p>
+            {creator.created_at && (
+              <p>
+                <strong>Created:</strong> {new Date(creator.created_at).toLocaleDateString()}
+              </p>
+            )}
             {creator.updated_at && (
               <p>
                 <strong>Last Updated:</strong> {new Date(creator.updated_at).toLocaleDateString()}

@@ -131,17 +131,17 @@
   transform: translateX(3px);
 }
 
-/* Action Buttons */
+/* Action Buttons Container */
 .card-actions {
   display: flex;
   gap: 8px;
   margin-top: auto;
-  padding-top: 20px;
+  padding-top: 16px; 
 }
 
 .btn {
-  flex: 1;
-  padding: 10px 8px;
+  flex: 1 1 0%; 
+  padding: 10px 4px;
   border: none;
   border-radius: 6px;
   font-size: 0.75rem;
@@ -152,6 +152,7 @@
   letter-spacing: 0.3px;
   white-space: nowrap;
   line-height: 1.2;
+  text-align: center; /* Ensures text stays perfectly centered */
 }
 
 .btn:hover {
